@@ -116,8 +116,6 @@ class Voice:
 
     def on_napping(self, secs):
         return random.choice([
-            self._('Napping for {secs}s ...').format(secs=secs),
-            self._('Zzzzz'),
             self._('ZzzZzzz ({secs}s)').format(secs=secs)])
 
     def on_shutdown(self):
@@ -130,8 +128,6 @@ class Voice:
 
     def on_waiting(self, secs):
         return random.choice([
-            self._('Waiting for {secs}s ...').format(secs=secs),
-            '...',
             self._('Looking around ({secs}s)').format(secs=secs)])
 
     def on_assoc(self, ap):
