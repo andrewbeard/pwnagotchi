@@ -88,7 +88,7 @@ class View(object):
             self._ignore_changes = ()
         else:
             logging.warning("ui.fps is 0, the display will only update for major changes")
-            self._ignore_changes = ('uptime', 'name', 'memtemp')
+            self._ignore_changes = ('uptime', 'name', 'memtemp', 'friend_face')
 
         ROOT = self
 
