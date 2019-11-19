@@ -262,10 +262,7 @@ class View(object):
                 else:
                     self.set('status', self._voice.on_waiting(int(secs)))
                     good_mood = self._agent.in_good_mood()
-                    if step % 2 == 0:
-                        self.set('face', faces.LOOK_R_HAPPY if good_mood else faces.LOOK_R)
-                    else:
-                        self.set('face', faces.LOOK_L_HAPPY if good_mood else faces.LOOK_L)
+                    self.set('face', faces.LOOK_R_HAPPY if good_mood else faces.LOOK_R)
 
             time.sleep(part)
             secs -= part
